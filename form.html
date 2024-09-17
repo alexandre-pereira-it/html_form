@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario</h1>
+    </header>
+    <main>
+        <form action="/send-form" method="post">
+            <fieldset>
+                <!-- Field set Title -->
+                <legend>Personal Info</legend>
+                <!-- Complete name (required) -->
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required><br>
+                <!-- Email (required) -->
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required><br>
+                <!-- Password (required) -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="******" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                required title="Deve conter pelo menos um número, uma letra maiúscula, uma letra minúscula, e pelo menos 8 ou mais caracteres"><br>
+                <!-- BirthDate (required) -->
+                <label for="birth-date">Data de Nascimento:</label>
+                <input type="date" id="birth-date" name="birth-date" required><br>
+                <!-- Radio (required) -->
+                <label for="radio">Genero:</label><br>
+                <input type="radio" id="masculine" name="radio-button" value="masculine" required>
+                <label for="masculine">Masculino</label>
+                <input type="radio" id="feminine" name="radio-button" value="feminine" required>
+                <label for="feminine">Femenino</label>
+                <input type="radio" id="other" name="radio-button" value="other" required>
+                <label for="other">Outro</label><br>
+                <!-- Bio (not required) -->
+                <label for="text-area">Biografia:</label><br>
+                <textarea name="text-area" id="text-area" placeholder="Breve descricao" cols="80" rows="8"></textarea><br>
+            </fieldset>
+            <!-- Submit Button -->
+            <input type="submit" value="Enviar">
+            <!-- Reset Button -->
+            <input type="reset" value="Reset">
+        </form>
+    </main>
+</body>
+</html>
